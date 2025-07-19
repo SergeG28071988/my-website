@@ -1,0 +1,120 @@
+/* Стили бургер-иконки */
+.burger-menu {
+    display: none;
+    width: 30px;
+    height: 21px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Мобильное меню */
+.menu {
+    display: flex;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        background-color: #2b2f3e;
+        padding: 40px 20px;
+        z-index: 1000;
+        transition: right 0.3s ease;
+    }
+
+    .menu.open {
+        right: 0;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .menu-list li a {
+        color: white;
+        font-size: 20px;
+        font-family: "Steppe-ExtraBold", sans-serif;
+        text-decoration: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-list li {
+    opacity: 0;
+    animation: fadeInUp 0.4s ease forwards;
+}
+
+/* Задержка появления по порядку */
+.menu.open .menu-list li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.menu.open .menu-list li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.menu.open .menu-list li:nth-child(3) {
+    animation-delay: 0.3s;
+}

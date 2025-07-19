@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сергей Галкин — бухгалтер и разработчик</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <link rel="stylesheet" href="static/css/burger-menu.css" />
+    <link rel="stylesheet" href="static/css/adaptive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="currency" title="Изменить валюту" id="change-currency">₽</div>
+
+      <header class="header">
+        <div class="container">
+          <div class="logo">
+            <img src="static/images/logo.png" alt="Logo" />
+          </div>
+          <div class="burger-menu" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="/" class="lang" data-key="home">Главная</a>
+              </li>
+              <li class="menu-item">
+                <a href="#about-us" class="lang" data-key="about-us"
+                  >Обо мне
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="#portfolio" class="lang" data-key="portfolio"
+                  >Портфолио
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="#services" class="lang" data-key="catalog">УСЛУГИ</a>
+              </li>
+              <li>
+                <a href="#sign-up" class="lang" data-key="sign-up"
+                  >Записаться</a
+                >
+              </li>
+              <li>
+                <a href="tel:+9066650249" class="phone">+ 7 906 665 02 49</a>
+              </li>
+              <li class="menu-item language-switch">
+                <img
+                  src="static/images/ru.png"
+                  alt="Русский"
+                  data-lang="ru"
+                  class="lang-flag active"
+                />
+                <img
+                  src="static/images/gb.png"
+                  alt="English"
+                  data-lang="en"
+                  class="lang-flag"
+                />
+                <img
+                  src="static/images/fr.png"
+                  alt="French"
+                  data-lang="fr"
+                  class="lang-flag"
+                />
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section class="main-content">
+        <div class="container">
+          <div class="main-info">
+            <h1 class="main-title lang" data-key="mainTitle">
+              Сергей Галкин — бухгалтер и разработчик
+            </h1>
+            <p class="main-text lang" data-key="mainText">
+              Надежно. Профессионально. Честно.
+            </p>
+            <div class="main-action">
+              <a
+                href="#services"
+                class="button lang"
+                id="main-action-button"
+                data-key="viewCatalogButton"
+                >Посмотреть каталог</a
+              >
+            </div>
+          </div>
+          <img
+            src="static/images/main-image.png"
+            alt="My-Photo"
+            class="main-image"
+          />
+        </div>
+      </section>
+
+      <section class="about-us" id="about-us">
+        <div class="container">
+          <!-- О компании -->
+          <div class="about-content">
+            <div class="about-text">
+              <h1 class="lang" data-key="about-me">
+                Обо МНЕ <br />
+                <span class="subtitle lang" data-key="work-result"
+                  >Работаю на результат!!!</span
+                >
+              </h1>
+              <p class="lang" data-key="born">
+                Родился 28 июля 1988 года в Орловской области, городе Мценск. В
+                2006 окончил СОШ №1 г. Мценск. После чего поступил в МФ "ОГТУ",
+                который окончил в 2008 году получив квалификацию - "Бухгалтер".
+              </p>
+              <p class="lang" data-key="manager-education">
+                В 2008 году поступил в МФ "Госуниверситет-УНПК" на специальность
+                - "Менеджер", который окончил в 2013 году.
+              </p>
+              <p class="lang" data-key="freelance-it">
+                С 2017 по 2019 год оказывал бухгалтерские услуги удаленно. С
+                2020 года - по настоящее время занимаюсь разработкой
+                программного обеспечения различной направленности.
+              </p>
+              <p class="lang" data-key="experience">
+                Опыт 8 лет в бухгалтерии и 5 лет в IT. Работаю как с физлицами,
+                так и с бизнесом. Консультирую, веду учет, пишу ПО под задачи
+                клиента.
+              </p>
+              <a
+                href="https://t.me/+rv1ZSFj3xIA4NTMy"
+                target="_blank"
+                class="tg-button lang"
+                data-key="go-to-telegram"
+              >
+                <img
+                  src="static/icons/telegram.svg"
+                  alt="Telegram"
+                  class="tg-icon"
+                />
+                Перейти в Telegram-канал
+              </a>
+            </div>
+            <div class="about-image">
+              <img src="static/images/я.jpg" alt="Я" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="portfolio-content">
+            <div class="portfolio-text">
+              <h2 class="lang" data-key="portfolioTitle">Примеры моих работ</h2>
+              <p class="lang" data-key="portfolioDescription">
+                Все проекты начинались с чистого HTML, CSS и JavaScript. Ниже
+                представлены финальные версии на React или Angular, размещённые
+                на GitHub Pages:
+              </p>
+              <div class="projects-grid">
+                <a
+                  href="https://sergeg28071988.github.io/optimus-prime-service/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🚗
+                  <span class="lang" data-key="project1"
+                    >Сайт автосервиса «Optimus Prime»</span
+                  >
+                  <small>(React)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/vrgames-shop/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🎮
+                  <span class="lang" data-key="project2">Магазин VR-игр</span>
+                  <small>(React)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/burger-pizza-app/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🍔
+                  <span class="lang" data-key="project3"
+                    >Сайт доставки бургеров и пиццы</span
+                  >
+                  <small>(React)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/shop/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🕶️
+                  <span class="lang" data-key="project4"
+                    >Магазин оптики #1</span
+                  >
+                  <small>(React)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/optic-shop/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  👓
+                  <span class="lang" data-key="project5"
+                    >Магазин оптики #2</span
+                  >
+                  <small>(React)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/cars/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🚘
+                  <span class="lang" data-key="project6"
+                    >Сайт аренды автомобилей</span
+                  >
+                  <small>(Angular)</small>
+                </a>
+                <a
+                  href="https://sergeg28071988.github.io/cookies/"
+                  target="_blank"
+                  class="project-card"
+                >
+                  🍪
+                  <span class="lang" data-key="project7"
+                    >Сайт по продаже печенья</span
+                  >
+                  <small>(Angular)</small>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services" id="services">
+        <div class="container">
+          <h2 class="lang" data-key="chooseService">Мои услуги</h2>
+          <div class="services-content" id="services-content">
+            <aside class="services-filter">
+              <ul id="category-filter">
+                <li
+                  class="active lang"
+                  data-category="all"
+                  data-key="allCategories"
+                >
+                  Все услуги
+                </li>
+                <li
+                  class="lang"
+                  data-category="IT-development"
+                  data-key="IT-development"
+                >
+                  IT-разработка
+                </li>
+                <li
+                  class="lang"
+                  data-category="Accounting"
+                  data-key="Accounting"
+                >
+                  Бухгалтерия
+                </li>
+                <li class="lang" data-category="Frames" data-key="Frames">
+                  Кадры
+                </li>
+              </ul>
+            </aside>
+
+            <div class="services-items" id="services-list">
+              <!-- IT-разработка -->
+              <article
+                class="service"
+                data-category="IT-разработка"
+                data-i18n-category-key="IT-development"
+              >
+                <img
+                  src="static/images/website_layout.jpg"
+                  alt="Верстка сайтов"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle1">Верстка сайтов</h4>
+                  <p class="lang" data-key="serviceDesc1">
+                    Создание качественных адаптивных сайтов на HTML, CSS и
+                    JavaScript.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="5000">
+                      от 5 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="service"
+                data-category="IT-разработка"
+                data-i18n-category-key="IT-development"
+              >
+                <img
+                  src="static/images/csharp.jpg"
+                  alt="Программирование на C#"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle2">
+                    Разработка на C#
+                  </h4>
+                  <p class="lang" data-key="serviceDesc2">
+                    Создание десктопных и веб-приложений на платформе .NET с
+                    использованием WinForms, WPF и ASP.NET.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="5000">
+                      от 5 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="service"
+                data-category="IT-разработка"
+                data-i18n-category-key="IT-development"
+              >
+                <img
+                  src="static/images/python_development.jpg"
+                  alt="Python разработка"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle3">
+                    Разработка на Python
+                  </h4>
+                  <p class="lang" data-key="serviceDesc3">
+                    Создание веб-приложений и серверных решений на Django и
+                    Flask.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="8000">
+                      от 8 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="service"
+                data-category="IT-разработка"
+                data-i18n-category-key="IT-development"
+              >
+                <img
+                  src="static/images/frontend_development.png"
+                  alt="React & Vue"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle4">
+                    Frontend-разработка на React и Vue.js
+                  </h4>
+                  <p class="lang" data-key="serviceDesc4">
+                    Создание интерактивных интерфейсов с современными
+                    технологиями фронтенд-разработки.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="10000">
+                      от 10 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Бухгалтерия -->
+              <article
+                class="service"
+                data-category="Бухгалтерия"
+                data-i18n-category-key="Accounting"
+              >
+                <img
+                  src="static/images/accounting_services.png"
+                  alt="Бухгалтерские услуги"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle5">
+                    Ведение бухгалтерии и налогового учета
+                  </h4>
+                  <p class="lang" data-key="serviceDesc5">
+                    Полный комплекс услуг по ведению бухгалтерского и налогового
+                    учета вашей компании.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="25000">
+                      от 25 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <!-- Кадры -->
+              <article
+                class="service"
+                data-category="Кадры"
+                data-i18n-category-key="Frames"
+              >
+                <img
+                  src="static/images/personnel_accounting.jpg"
+                  alt="Кадровые услуги"
+                />
+                <div class="service-details">
+                  <h4 class="lang" data-key="serviceTitle6">Кадровый учет</h4>
+                  <p class="lang" data-key="serviceDesc6">
+                    Организация кадрового делопроизводства и ведение кадровых
+                    документов.
+                  </p>
+                  <div class="service-action">
+                    <div class="service-price" data-base-price="25000">
+                      от 25 000 ₽
+                    </div>
+                    <a
+                      href="#sign-up"
+                      class="button white-button lang"
+                      data-key="orderService"
+                      >Заказать услугу</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="service-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">×</span>
+          <h3 id="modal-title" class="lang" key="modalTitle"></h3>
+          <p id="modal-text" class="lang" key="modalText"></p>
+          <div id="modal-price" class="modal-price"></div>
+        </div>
+      </div>
+
+      <section class="sign-up" id="sign-up">
+        <div class="container">
+          <h2 class="sub-title lang" data-key="signUpTitle">
+            Запись на консультацию
+          </h2>
+          <div class="sign-up-text lang" data-key="signUpText">
+            Заполните контактные данные, и я лично перезвоним вам для обсуждения
+            деталей и подтверждения записи на консультацию.
+          </div>
+          <form action="" class="sign-up-form">
+            <input
+              type="text"
+              class="sign-up-input lang"
+              id="name"
+              placeholder="Ваше имя"
+              data-key="placeholderName"
+            />
+            <input
+              type="text"
+              class="sign-up-input lang"
+              id="phone"
+              placeholder="Ваш телефон"
+              data-key="placeholderPhone"
+            />
+            <input
+              type="text"
+              class="sign-up-input lang"
+              id="service"
+              placeholder="Услуга, которая вас интересует"
+              data-key="placeholderService"
+            />
+            <button
+              class="button violet-button lang"
+              id="sign-up-action"
+              data-key="signUpButton"
+            >
+              Записаться на консультацию
+            </button>
+          </form>
+          <img
+            src="static/images/ai -bot.png"
+            alt="Консультация"
+            class="sign-up-image"
+          />
+        </div>
+      </section>
+
+      <footer style="background: #222; color: #fff; padding: 40px 20px">
+        <div
+          style="
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+          "
+        >
+          <div style="flex: 1 1 300px; margin-bottom: 20px">
+            <h3 class="lang" data-key="contactMe"></h3>
+            <p>Email: galckinserega@gmail.com</p>
+            <p class="lang" data-key="phone"></p>
+            <p class="lang" data-key="address"></p>
+          </div>
+
+          <div style="flex: 1 1 300px; margin-bottom: 20px">
+            <h3 class="lang" data-key="navigation"></h3>
+            <ul style="list-style: none; padding: 0">
+              <li>
+                <a
+                  href="#services"
+                  style="color: #ccc"
+                  class="lang"
+                  data-key="navServices"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#about-us"
+                  style="color: #ccc"
+                  class="lang"
+                  data-key="navAbout"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#sign-up"
+                  style="color: #ccc"
+                  class="lang"
+                  data-key="navSignUp"
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div style="flex: 1 1 300px">
+            <h3 class="lang" data-key="socialMedia"></h3>
+            <div style="display: flex; gap: 10px; font-size: 24px">
+              <a href="https://vk.com" target="_blank" style="color: #ccc">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a
+                href="https://wa.me/79534705287"
+                target="_blank"
+                style="color: #ccc"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="https://t.me/@SeregaG1988"
+                target="_blank"
+                style="color: #ccc"
+              >
+                <i class="fab fa-telegram"></i>
+              </a>
+              <a
+                href="https://rutube.ru/channel/39322833/"
+                target="_blank"
+                style="color: #ccc"
+              >
+                <i class="fas fa-video"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@user-proger88"
+                target="_blank"
+                style="color: #ccc"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #aaa;
+          "
+        >
+          <div class="rights lang" data-key="copyright"></div>
+        </div>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/yourkitid.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="static/js/scripts.js"></script>
+    <script src="static/js/lang.js"></script>
+    <script src="static/js/lang-currency-sync.js"></script>
+  </body>
+</html>

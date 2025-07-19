@@ -1,0 +1,728 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;  
+}
+
+@font-face {
+    font-family: "Steppe-Book";
+    src: url("../../fonts/Steppe-Book.ttf");
+}
+
+@font-face {
+    font-family: "Steppe-ExtraBold";
+    src: url("../../fonts/Steppe-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/Roboto-Light.ttf");
+}
+
+body {
+    background: linear-gradient(to right, #fffcfc 0%, #063cc5 60%, #e70914 100%);
+    /* background-image:
+            radial-gradient(rgba(95, 15, 238 / 0.2) 1px, transparent 1px),
+            radial-gradient(rgba(87, 13, 238 / 0.5) 1px, transparent 1px); */
+    background-position: center;
+    background-size: cover;
+    /* background-size: 150px 100px, 150px 150px; */
+    background-position: 0 0, 50px 50px;
+    font-family: 'Steppe-Book', sans-serif;
+    color: #000000;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #ffffff;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 18px;
+    text-align: center;
+    color: #5243F4;
+    border: 0;
+    outline: none;
+    cursor: pointer;    
+}
+
+.button:hover:not(:disabled) {
+    background-color: #FFFFFF;
+}
+
+.button:disabled {
+    cursor: not-allowed;
+    color: grey;
+    background-color: #343434; 
+}
+
+.violet-button {
+    background-color: #5243F4;
+    color: white;
+}
+
+.button:hover {
+    background-color: #eeeeee;
+}
+
+.button.violet-button:hover {
+    background-color: #3b2cd8;
+}
+
+.button:hover {
+    background-color: #FFFFFF;
+}
+
+.button.white-button {
+    background-color: #FFFFFF;
+}
+
+.button.white-button:hover {
+    background-color: #14bfe1;
+}
+
+.main {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 48px;
+}
+
+.currency {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid rgb(150, 67, 67);
+    padding: 5px 10px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 60px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: 1;
+    color: #ffffff;
+    user-select: none;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(0.9);
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+}
+
+.header {
+    padding: 66px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 129px;
+    vertical-align: bottom;
+}
+
+.menu {
+    margin-left: 77px;
+    margin-right: auto;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 65px;
+}
+
+.menu ul a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;    
+}
+
+.menu ul a:hover {
+    color: #F8FF23;
+}
+
+.menu .phone {
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: right;
+    cursor: pointer;
+    letter-spacing: normal;
+}
+
+.language-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-flag {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.lang-flag.active,
+.lang-flag:hover {
+    opacity: 1;
+}
+
+.main-content {
+    padding-top: 61px;
+    padding-bottom: 275px;
+}
+
+.main-content .container {
+    position: relative;
+}
+
+.main-info {
+    max-width: 755px;
+}
+
+.main-title {
+    font-family: "Steppe-ExtraBold", sans-serif;
+    font-size: 90px;
+    line-height: 100%;
+    margin-bottom: 20px;
+    color: #1212e0;
+    font-weight: normal;
+}
+
+.main-text {
+    font-family: 'Helvetica', sans-serif;
+    color: #c11e1e;
+    max-width: 697px;
+    font-size: 22px;
+    line-height: 130%;
+    margin-bottom: 40px;
+}
+
+.main-image {
+    position: absolute;
+    top: -80px;
+    right: -276px;
+    z-index: -1;
+}
+
+.main-image img {
+    width: auto;
+    height: 400px;
+}
+
+/* Блок Каталог услуг */
+
+.services {
+    background-color: rgba(22, 21, 26, 0.5);   
+    padding: 150px 0; 
+}
+
+.common-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 40px;    
+}
+
+.about-us {
+    padding: 180px 0 120px 0;
+    background: linear-gradient(to right, #fffcfc 20%, #063cc5 60%, #e70914 100%);
+    color: #fff;
+}
+
+ .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 80px;   
+} 
+
+.about-text {
+    flex: 1 1 540px;
+    max-width: 540px;
+}
+
+.about-text h1 {
+    font-size: 46px;
+    line-height: 1.3;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000000;
+}
+.about-text .subtitle {
+    display: block;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.about-text p {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    color: #000000;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    margin-top: 40px;
+    max-width: 480px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    will-change: transform;
+    animation: float 4s ease-in-out infinite;
+    display: block;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(1deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+    100% { transform: translateY(0px) rotate(1deg); }
+} 
+
+.tg-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  /* margin-bottom: 60px; */
+  background-color: #229ED9; /* фирменный цвет Telegram */
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  gap: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tg-button:hover {
+  background-color: #1b8fc7;
+  transform: translateY(-2px);
+}
+
+.tg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.portfolio {
+  padding: 120px 0;
+  background: linear-gradient(to right, #1f1f1f, #2d2d2d); /* Можно заменить на свой фон */
+  color: #fff;
+}
+
+.portfolio-text {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-text h2 {
+  font-family: 'Steppe-ExtraBold', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #f8f8f8;
+}
+
+.portfolio-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* Грид сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Карточка проекта */
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px 16px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+/* и так далее */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.project-card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.project-card small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.project-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+.services {
+    background: linear-gradient(to right, #290404 0%, #323c5f 50%, #585859 100%);
+    padding: 230px 0;
+}
+
+.services h2 {
+    font-size: 75px;
+    color: #dce1e8;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services-content {
+    display: flex;
+    padding-top: 60px;
+}
+
+.services-filter {
+    margin-right: 77px;
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+
+.services-filter ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    list-style: none;
+}
+
+.services-filter ul li {
+    width: 227px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+    font-size: 16px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+}
+
+.services-filter ul li.active,
+.services-filter ul li:hover {
+    color: #F8FF23;
+    border-color: #F8FF23;
+}
+
+/* Блок информации об услугах */
+
+.services-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.service {
+    background-color: rgba(102, 211, 209, 0.696);
+    padding: 20px;
+    display: flex;
+    min-width: 450px;
+
+}
+
+.service img {
+    max-width: 468px;
+}
+
+.service-details {
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-details h4 {
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 20px;
+    color: #dce1e8;
+}
+
+.service-details p {
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: normal;
+    color: #f6f1f1;
+    height: 100px;
+}
+
+.service-action {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-price {
+    font-family: "Steppe-ExtraBold", sans-serif;
+    font-size: 24px;
+    color: #6359d0;
+    margin-bottom: 10px;
+}
+
+.service-action .button {
+    width: 244px;
+}
+
+.service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.sign-up {
+    overflow: hidden;
+    padding-top: 189px;
+    padding-bottom: 40px;
+}
+
+.sign-up .container {
+    position: relative;
+    padding-bottom: 121px;
+}
+
+.sign-up .sub-title {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 100%;
+    margin-bottom: 40px;
+    color: #202225;
+}
+
+.sign-up-text {
+    font-size: 24px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 60px;
+    max-width: 555px;
+}
+
+.sign-up-form {
+    max-width: 544px;
+    box-sizing: border-box;
+}
+
+.sign-up-input {
+    border: 1px solid white;
+    border-radius: 60px;
+    margin-bottom: 16px;
+    padding: 24px 22px;
+    font-size: 18px;
+    width: 538px;
+    height: 58px;
+    background: transparent;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+.sign-up-input::placeholder {
+    color: #ffffff;
+}
+
+.sign-up .button {
+    width: 100%;
+}
+
+.sign-up-image {
+    position: absolute;
+    bottom: 0;
+    top: -40px;
+    left: 701px;
+}
+
+.footer {
+    padding: 47px 0;
+    border-top: 1px solid #5f5f5f;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rights {
+    font-size: 16px;
+    line-height: 90%;
+    letter-spacing: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* background-color: rgba(9, 8, 8, 0.7); */
+}
+
+.modal-content {
+    /* background-color: #fffcfc; */
+    margin: auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal-content .service-price {
+    color: #000000;
+}
+
+.modal-prices {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.modal-price-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 5px 10px;
+    background: rgb(95 13 238 / 0.5);
+    border-radius: 6px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fefefe;
+    cursor: pointer;
+}
+
+/* Анимация появления */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#service-modal {
+    display: none;
+    /* по умолчанию скрыто */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#service-modal .modal-content {
+    animation: modalFadeIn 0.4s ease;
+    background-color: rgba(125, 197, 197, 0.5);
+    margin: 10% auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 90%;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: relative;
+}
